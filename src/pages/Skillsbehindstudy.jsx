@@ -64,7 +64,7 @@ const Skillsbehindstudy = () => {
         <header className="sticky top-0 z-40 backdrop-blur-lg bg-[#0f2e1a]/40 border-b border-white/5">
           <div className="max-w-6xl mx-auto px-6 sm:px-8 py-4 flex items-center justify-between">
             <button
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/#services")}
               className="flex items-center gap-2 text-sm font-medium text-[#c9a86c] hover:text-[#e8d5b5] transition-colors duration-300 cursor-pointer"
             >
               <svg
@@ -151,7 +151,7 @@ const Skillsbehindstudy = () => {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-[#5eead4]/20 to-[#c9a86c]/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <img
-                src="/assets/services/studies.png"
+                src="/assets/services/stud.png"
                 alt="Skills Behind Studies Guide"
                 className="relative w-full h-auto rounded-2xl border border-white/15 shadow-2xl"
               />
@@ -160,137 +160,303 @@ const Skillsbehindstudy = () => {
         </section>
 
         {/* Scientific Approach Section */}
-        <section className="max-w-6xl mx-auto px-6 sm:px-8 py-16 sm:py-24">
+        <section className="max-w-6xl mx-auto px-6 sm:px-8 py-16 sm:py-20">
+          {/* Intro paragraphs */}
           <FadeUp>
-            <h2 className="font-display text-4xl sm:text-5xl font-light text-[#fff8ef] mb-4">
-              🔹 Scientific Approach / Method
+            <span className="inline-flex items-center rounded-full border border-[#c9a86c]/25 bg-[#14381f]/60 px-5 py-2 text-[0.6rem] font-semibold uppercase tracking-[0.32em] text-[#c9a86c] backdrop-blur-sm mb-8">
+              World's First Proven Scientific Approach
+            </span>
+          </FadeUp>
+
+          <div className="space-y-6 mb-16">
+            <FadeUp delay={80}>
+              <p className="text-[1rem] leading-[1.95] text-[rgba(255,248,236,0.72)] max-w-4xl">
+                World's first proven scientific approach to find a child's
+                specific learning method to learn anything stress free and
+                develop{" "}
+                <span className="text-[#c9a86c] font-medium">
+                  Concentration, Comprehension,
+                </span>{" "}
+                and{" "}
+                <span className="text-[#c9a86c] font-medium">
+                  long-term memory.
+                </span>
+              </p>
+            </FadeUp>
+            <FadeUp delay={160}>
+              <p className="text-[1rem] leading-[1.95] text-[rgba(255,248,236,0.62)] max-w-4xl">
+                Our{" "}
+                <span className="text-[#5eead4]">
+                  13 years of research and study
+                </span>{" "}
+                says, the maximum percentage of 6 years and above children's
+                unhealthy behaviors are directly connected to being unaware of
+                skills behind studies and also practicing wrong methods which
+                are influenced by others or taught by others.
+              </p>
+            </FadeUp>
+            <FadeUp delay={240}>
+              <p className="text-[1rem] leading-[1.95] text-[rgba(255,248,236,0.62)] max-w-4xl">
+                With the support of{" "}
+                <span className="text-[#c9a86c] font-medium">
+                  Unique TRUTH's Fingerprint Analysis,
+                </span>{" "}
+                customized specific learning methods help a child to perform
+                best in their academics.
+              </p>
+            </FadeUp>
+          </div>
+
+          <div className="mx-auto mb-16 h-px max-w-xs bg-gradient-to-r from-transparent via-[#c9a86c]/40 to-transparent" />
+
+          {/* Learning profiles heading */}
+          <FadeUp delay={80}>
+            <h2 className="font-display text-[clamp(1.9rem,3.8vw,3rem)] font-light text-[#fff8ef] mb-2 leading-tight">
+              Identify Your Child's{" "}
+              <em className="italic text-[#c9a86c]">Learning Profile</em>
             </h2>
             <div
-              className="w-24 h-1 rounded-full mb-12"
-              style={{
-                background: "linear-gradient(90deg, #c9a86c 0%, #5eead4 100%)",
-              }}
+              className="w-20 h-px rounded-full mb-12"
+              style={{ background: "linear-gradient(90deg,#c9a86c,#5eead4)" }}
             />
           </FadeUp>
 
-          <div className="grid md:grid-cols-2 gap-6 auto-rows-fr">
-            {[
-              {
-                title: "Fingerprint Analysis",
-                description: "",
-                icon: "🔹",
-                accentColor: "from-[#c9a86c]",
-              },
-              {
-                title: "Reveals concentration level",
-                description: "",
-                icon: "🔹",
-                accentColor: "from-[#5eead4]",
-              },
-              {
-                title: "Identifies grasping speed",
-                description: "",
-                icon: "🔹",
-                accentColor: "from-[#c9a86c]",
-              },
-              {
-                title: "Finds dominant learning method",
-                description: "",
-                icon: "🔹",
-                accentColor: "from-[#5eead4]",
-              },
-            ].map((item, idx) => (
-              <FadeUp key={idx} delay={idx * 120}>
+          {/* Learning profile cards */}
+          {[
+            {
+              title: "Monoperformer",
+              accent: "#c9a86c",
+              icon: (
+                <svg viewBox="0 0 32 32" fill="none" className="w-6 h-6">
+                  <circle
+                    cx="16"
+                    cy="16"
+                    r="13"
+                    stroke="#c9a86c"
+                    strokeWidth="1.3"
+                  />
+                  <circle cx="16" cy="16" r="5" fill="#c9a86c" opacity=".35" />
+                  <line
+                    x1="16"
+                    y1="3"
+                    x2="16"
+                    y2="8"
+                    stroke="#c9a86c"
+                    strokeWidth="1.2"
+                    strokeLinecap="round"
+                    opacity=".5"
+                  />
+                  <line
+                    x1="16"
+                    y1="24"
+                    x2="16"
+                    y2="29"
+                    stroke="#c9a86c"
+                    strokeWidth="1.2"
+                    strokeLinecap="round"
+                    opacity=".5"
+                  />
+                  <line
+                    x1="3"
+                    y1="16"
+                    x2="8"
+                    y2="16"
+                    stroke="#c9a86c"
+                    strokeWidth="1.2"
+                    strokeLinecap="round"
+                    opacity=".5"
+                  />
+                  <line
+                    x1="24"
+                    y1="16"
+                    x2="29"
+                    y2="16"
+                    stroke="#c9a86c"
+                    strokeWidth="1.2"
+                    strokeLinecap="round"
+                    opacity=".5"
+                  />
+                </svg>
+              ),
+              options: [
+                "My child studies inside the room",
+                "My child studies outside the room",
+              ],
+              delay: 0,
+            },
+            {
+              title: "Multitasker",
+              accent: "#5eead4",
+              icon: (
+                <svg viewBox="0 0 32 32" fill="none" className="w-6 h-6">
+                  <path
+                    d="M8 8 L16 4 L24 8 L24 20 L16 24 L8 20 Z"
+                    stroke="#5eead4"
+                    strokeWidth="1.3"
+                    strokeLinejoin="round"
+                  />
+                  <line
+                    x1="16"
+                    y1="4"
+                    x2="16"
+                    y2="24"
+                    stroke="#5eead4"
+                    strokeWidth=".8"
+                    opacity=".35"
+                  />
+                  <line
+                    x1="8"
+                    y1="14"
+                    x2="24"
+                    y2="14"
+                    stroke="#5eead4"
+                    strokeWidth=".8"
+                    opacity=".35"
+                  />
+                </svg>
+              ),
+              options: [
+                "My child does physical movements while studying",
+                "My child studies silently without physical movements",
+              ],
+              delay: 100,
+            },
+            {
+              title: "Adequate Grasping Speed",
+              accent: "#c9a86c",
+              icon: (
+                <svg viewBox="0 0 32 32" fill="none" className="w-6 h-6">
+                  <path
+                    d="M6 24 L12 16 L18 20 L26 10"
+                    stroke="#c9a86c"
+                    strokeWidth="1.4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <circle cx="26" cy="10" r="2.5" fill="#c9a86c" opacity=".6" />
+                </svg>
+              ),
+              options: [
+                "My child learns better with 1 on 1 teachings",
+                "My child learns great with group teachings",
+              ],
+              delay: 200,
+            },
+            {
+              title: "Normal Grasping Speed",
+              accent: "#5eead4",
+              icon: (
+                <svg viewBox="0 0 32 32" fill="none" className="w-6 h-6">
+                  <circle
+                    cx="16"
+                    cy="12"
+                    r="6"
+                    stroke="#5eead4"
+                    strokeWidth="1.3"
+                  />
+                  <path
+                    d="M8 28 C8 22 11 19 16 19 C21 19 24 22 24 28"
+                    stroke="#5eead4"
+                    strokeWidth="1.3"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              ),
+              options: [
+                "My child learns with push and reminders",
+                "My child learns without parents' interference",
+              ],
+              delay: 300,
+            },
+            {
+              title: "Excellent Grasping Speed",
+              accent: "#c9a86c",
+              icon: (
+                <svg viewBox="0 0 32 32" fill="none" className="w-6 h-6">
+                  <path
+                    d="M16 4 L19.5 12.5 L28 13.5 L22 19.5 L23.5 28 L16 24 L8.5 28 L10 19.5 L4 13.5 L12.5 12.5 Z"
+                    stroke="#c9a86c"
+                    strokeWidth="1.3"
+                    strokeLinejoin="round"
+                    fill="#c9a86c"
+                    fillOpacity=".1"
+                  />
+                </svg>
+              ),
+              options: [
+                "My child learns everything at one time learning",
+                "My child learns with repeated practices",
+              ],
+              delay: 400,
+            },
+          ].map((profile, i) => (
+            <FadeUp key={i} delay={profile.delay}>
+              <div
+                className="group relative mb-5 overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm transition-all duration-400"
+                style={{ "--accent": profile.accent }}
+              >
+                {/* top accent line on hover */}
                 <div
-                  className={`group h-full p-8 rounded-2xl border border-white/10 bg-gradient-to-br ${item.accentColor}/5 to-transparent backdrop-blur-sm hover:bg-white/8 hover:border-white/20 transition-all duration-500 hover:shadow-xl cursor-pointer`}
-                >
-                  <div className="flex items-start gap-4">
-                    <span className="text-2xl">{item.icon}</span>
-                    <h3 className="font-display text-2xl font-light text-[#fff8ef] group-hover:text-[#c9a86c] transition-colors">
-                      {item.title}
+                  className="absolute left-0 top-0 h-px w-0 transition-all duration-500 group-hover:w-full"
+                  style={{
+                    background: `linear-gradient(90deg, ${profile.accent}90, transparent)`,
+                  }}
+                />
+                {/* ambient glow */}
+                <div
+                  className="pointer-events-none absolute -top-8 -left-8 h-28 w-28 rounded-full opacity-0 blur-[50px] transition-opacity duration-500 group-hover:opacity-100"
+                  style={{
+                    background: `radial-gradient(circle, ${profile.accent}20 0%, transparent 70%)`,
+                  }}
+                />
+
+                <div className="relative p-6 sm:p-8">
+                  {/* header row */}
+                  <div className="mb-6 flex items-center gap-3">
+                    <div
+                      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/[0.08]"
+                      style={{ background: `${profile.accent}14` }}
+                    >
+                      {profile.icon}
+                    </div>
+                    <h3 className="font-display text-[1.45rem] sm:text-[1.65rem] font-light leading-tight text-[#fff8ef] transition-colors duration-300 group-hover:text-[#c9a86c]">
+                      {profile.title}
                     </h3>
+                    <div
+                      className="ml-auto h-px w-10 shrink-0 rounded-full transition-all duration-500 group-hover:w-20"
+                      style={{ background: `${profile.accent}60` }}
+                    />
+                  </div>
+
+                  {/* options */}
+                  <div className="grid sm:grid-cols-2 gap-3">
+                    {profile.options.map((opt, j) => (
+                      <div
+                        key={j}
+                        className="flex items-start gap-3 rounded-xl border border-white/[0.06] bg-white/[0.03] px-4 py-3.5 transition-all duration-300 hover:border-[rgba(201,168,108,0.2)] hover:bg-white/[0.06]"
+                      >
+                        <span
+                          className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full border"
+                          style={{
+                            borderColor: `${profile.accent}60`,
+                            background: `${profile.accent}12`,
+                          }}
+                        >
+                          <span
+                            className="h-1.5 w-1.5 rounded-full"
+                            style={{ background: profile.accent }}
+                          />
+                        </span>
+                        <p className="text-[0.88rem] leading-[1.75] text-[rgba(255,248,236,0.68)]">
+                          {opt}
+                        </p>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              </FadeUp>
-            ))}
-          </div>
-        </section>
-
-        {/* Learning Challenges Sections */}
-        <section className="max-w-6xl mx-auto px-6 sm:px-8 py-16 sm:py-24">
-          <div className="space-y-8">
-            {/* Type 1 */}
-            <FadeUp>
-              <div className="p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/8 hover:border-white/20 transition-all duration-500 group">
-                <h3 className="font-display text-2xl font-light text-[#fff8ef] group-hover:text-[#c9a86c] transition-colors mb-6">
-                  🔹 Do You Know? (Learning Challenges – Type 1)
-                </h3>
-                <div className="space-y-3">
-                  {[
-                    "Fall asleep if they study in the room",
-                    "Forget the words if they are marked by highlighters",
-                    "Find it difficult to understand if they study silently",
-                  ].map((challenge, idx) => (
-                    <p
-                      key={idx}
-                      className="text-[0.95rem] leading-relaxed text-[rgba(255,248,236,0.8)] group-hover:text-[rgba(255,248,236,0.95)] transition-colors flex items-start gap-3"
-                    >
-                      <span className="text-[#5eead4] mt-1">•</span>
-                      {challenge}
-                    </p>
-                  ))}
-                </div>
               </div>
             </FadeUp>
-
-            {/* Type 2 */}
-            <FadeUp delay={150}>
-              <div className="p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/8 hover:border-white/20 transition-all duration-500 group">
-                <h3 className="font-display text-2xl font-light text-[#fff8ef] group-hover:text-[#c9a86c] transition-colors mb-6">
-                  🔹 Do You Know? (Learning Challenges – Type 2)
-                </h3>
-                <div className="space-y-3">
-                  {[
-                    "Get distracted if they study for more than 20 minutes",
-                    "Body & mind do not support studying quietly",
-                    "Difficult to understand just by reading and listening",
-                  ].map((challenge, idx) => (
-                    <p
-                      key={idx}
-                      className="text-[0.95rem] leading-relaxed text-[rgba(255,248,236,0.8)] group-hover:text-[rgba(255,248,236,0.95)] transition-colors flex items-start gap-3"
-                    >
-                      <span className="text-[#5eead4] mt-1">•</span>
-                      {challenge}
-                    </p>
-                  ))}
-                </div>
-              </div>
-            </FadeUp>
-
-            {/* Type 3 */}
-            <FadeUp delay={300}>
-              <div className="p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/8 hover:border-white/20 transition-all duration-500 group">
-                <h3 className="font-display text-2xl font-light text-[#fff8ef] group-hover:text-[#c9a86c] transition-colors mb-6">
-                  🔹 Do You Know? (Learning Challenges – Type 3)
-                </h3>
-                <div className="space-y-3">
-                  {[
-                    "Difficult to concentrate in noisy environments",
-                    "Get distracted in group discussions",
-                    "Trouble concentrating when tasks are assigned in between",
-                  ].map((challenge, idx) => (
-                    <p
-                      key={idx}
-                      className="text-[0.95rem] leading-relaxed text-[rgba(255,248,236,0.8)] group-hover:text-[rgba(255,248,236,0.95)] transition-colors flex items-start gap-3"
-                    >
-                      <span className="text-[#5eead4] mt-1">•</span>
-                      {challenge}
-                    </p>
-                  ))}
-                </div>
-              </div>
-            </FadeUp>
-          </div>
+          ))}
         </section>
 
         {/* CTA Section */}

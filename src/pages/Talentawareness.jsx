@@ -64,7 +64,7 @@ const Talentawareness = () => {
         <header className="sticky top-0 z-40 backdrop-blur-lg bg-[#0f2e1a]/40 border-b border-white/5">
           <div className="max-w-6xl mx-auto px-6 sm:px-8 py-4 flex items-center justify-between">
             <button
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/#services")}
               className="flex items-center gap-2 text-sm font-medium text-[#c9a86c] hover:text-[#e8d5b5] transition-colors duration-300 cursor-pointer"
             >
               <svg

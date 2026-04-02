@@ -3,7 +3,10 @@ import { motion } from "framer-motion";
 
 const Growthsection = () => {
   return (
-    <section id="growth" className="relative overflow-hidden bg-[#0F2E15] py-20 sm:py-24 lg:py-28">
+    <section
+      id="growth"
+      className="relative overflow-hidden bg-[#0F2E15] py-20 sm:py-24 lg:py-28"
+    >
       <style>{`
         .growth-noise {
           background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
@@ -12,11 +15,11 @@ const Growthsection = () => {
         .growth-card {
           transition: border-color .35s, box-shadow .35s, transform .35s cubic-bezier(.22,1,.36,1);
         }
-        .growth-card:hover {
-          border-color: rgba(201,168,108,.36);
-          box-shadow: 0 30px 80px rgba(0,0,0,.45);
-          transform: translateY(-3px);
-        }
+        // .growth-card:hover {
+        //   border-color: rgba(201,168,108,.36);
+        //   box-shadow: 0 30px 80px rgba(0,0,0,.45);
+        //   transform: translateY(-3px);
+        // }
       `}</style>
 
       {/* Ambient layers to match Aboutus tone */}
@@ -45,8 +48,8 @@ const Growthsection = () => {
               className="text-[clamp(2.05rem,4.2vw,3.35rem)] font-light leading-[1.14] tracking-[-0.012em] text-[#fff8ef]"
               style={{ fontFamily: "var(--font-cormorant-garamond), serif" }}
             >
-              Unlock Your Potential with{" "}
-              <em className="italic text-[#c9a86c]">clarity and precision.</em>
+              Let's Reveal Individualistic Psycology{" "}
+              <em className="italic text-[#c9a86c]">through fingertips.</em>
             </h2>
 
             <div className="mt-7 h-px w-24 bg-linear-to-r from-[#c9a86c]/60 to-transparent" />
@@ -77,32 +80,21 @@ const Growthsection = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.08 }}
+            transition={{
+              duration: 0.8,
+              ease: [0.22, 1, 0.36, 1],
+              delay: 0.08,
+            }}
           >
-            <div className="growth-card relative overflow-hidden rounded-[1.65rem] border border-white/10 bg-[#102f18]/75 p-4 sm:p-5 backdrop-blur-sm">
-              <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-[#c9a86c]/10 via-transparent to-teal-400/10" />
-              <div className="pointer-events-none absolute left-1/2 top-0 h-px w-36 -translate-x-1/2 bg-linear-to-r from-transparent via-[#c9a86c]/65 to-transparent" />
-
+            <div className="growth-card relative overflow-hidden">
               <img
-                src="/assets/newgrowthbg.png"
+                src="/assets/growth_new.png"
                 alt="Illustration of unlocking the mind and personal discovery"
-                className="relative z-10 h-auto w-full object-contain object-center"
+                className="relative z-10 h-auto w-full rounded-3xl object-contain object-center"
                 loading="lazy"
                 decoding="async"
                 fetchPriority="low"
               />
-
-              <div className="absolute bottom-4 left-4 rounded-xl border border-[#c9a86c]/25 bg-[#0F2E15]/88 px-3 py-2 backdrop-blur-md">
-                <p className="text-[0.52rem] uppercase tracking-[0.28em] text-[#c9a86c]/75">
-                  Unique Insight
-                </p>
-                <p
-                  className="text-[1.05rem] font-light leading-none text-[#fff8ef]"
-                  style={{ fontFamily: "var(--font-cormorant-garamond), serif" }}
-                >
-                  Precision Growth
-                </p>
-              </div>
             </div>
           </motion.div>
         </div>

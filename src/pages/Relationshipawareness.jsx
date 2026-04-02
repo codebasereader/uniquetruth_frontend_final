@@ -64,7 +64,7 @@ const Relationshipawareness = () => {
         <header className="sticky top-0 z-40 backdrop-blur-lg bg-[#0f2e1a]/40 border-b border-white/5">
           <div className="max-w-6xl mx-auto px-6 sm:px-8 py-4 flex items-center justify-between">
             <button
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/#services")}
               className="flex items-center gap-2 text-sm font-medium text-[#c9a86c] hover:text-[#e8d5b5] transition-colors duration-300 cursor-pointer"
             >
               <svg
@@ -137,7 +137,7 @@ const Relationshipawareness = () => {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-[#5eead4]/20 to-[#c9a86c]/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <img
-                src="/assets/services/relationship.png"
+                src="/assets/services/relationship_new.png"
                 alt="Relationship Awareness Guide"
                 className="relative w-full h-auto rounded-2xl border border-white/15 shadow-2xl"
               />
