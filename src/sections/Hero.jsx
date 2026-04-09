@@ -51,6 +51,7 @@ const Hero = () => {
     { label: "Services", href: "#services" },
     { label: "About us", href: "#about" },
     { label: "Career", href: "#career" },
+    { label: "Contact us", href: "#contact" },
   ];
 
   useEffect(() => {
@@ -169,13 +170,7 @@ const Hero = () => {
 
             <div className="flex items-center gap-2 sm:gap-2.5">
               <a
-                href="#contact"
-                className="hero-cta-ghost inline-flex items-center justify-center rounded-full border border-white/12 bg-white/[0.05] px-3 py-2 text-[0.68rem] font-semibold tracking-[0.12em] text-[#fff8ef] no-underline backdrop-blur-sm sm:px-4 sm:text-[0.72rem]"
-              >
-                Contact Us
-              </a>
-              <a
-                href="#login"
+                href="/login"
                 className="hero-cta-primary inline-flex items-center justify-center rounded-full border border-[#c9a86c]/55 bg-[#c9a86c] px-3 py-2 text-[0.68rem] font-semibold tracking-[0.1em] text-[#1a120c] no-underline shadow-[0_8px_28px_rgba(201,168,108,0.28)] sm:px-4 sm:text-[0.72rem]"
               >
                 Login
@@ -259,9 +254,10 @@ const Hero = () => {
               </span>
 
               <h1 className="font-display relative mt-6 text-[clamp(2.75rem,6.2vw,5rem)] font-light leading-[1.05] tracking-[-0.02em] text-[#fff8ef]">
-                Reveals Your <em className="italic text-[#c9a86c]">Unique</em>
-                <br />
-                Nature
+                <span className="block sm:inline">Reveals Your</span>
+                <span className="block sm:ml-2">
+                  <em className="italic text-[#c9a86c]">Unique</em> Nature
+                </span>
               </h1>
 
               <div className="relative mx-auto mt-6 h-px w-24 bg-gradient-to-r from-transparent via-[#c9a86c]/60 to-transparent" />

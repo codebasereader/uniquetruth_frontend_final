@@ -550,14 +550,14 @@ export default function Aboutus() {
 
             <FadeUp>
               <p className="text-[0.65rem] font-semibold uppercase tracking-[0.55em] text-[#c9a86c] mb-5">
-                About Us
+                STORY OF UNIQUE TRUTH
               </p>
             </FadeUp>
 
             <FadeUp delay={80}>
               <h2 className="font-display text-[clamp(2.1rem,5.5vw,3.8rem)] font-light leading-[1.18] text-[#fff8ef]">
-                Truth, clarity, and growth —{" "}
-                <em className="italic text-[#c9a86c]">in one journey.</em>
+                Unleashing your true potential and uncovering your{" "}
+                <em className="italic text-[#c9a86c]">Uniqueness.</em>
               </h2>
             </FadeUp>
 
@@ -566,10 +566,13 @@ export default function Aboutus() {
             </FadeUp>
 
             <FadeUp delay={210}>
-              <p className="mx-auto mt-7 max-w-lg text-[0.9rem] leading-[1.92] text-[rgba(255,248,236,0.56)]">
-                We believe every individual carries a universe within — a unique
-                constellation of gifts, patterns, and potential waiting to be
-                discovered and lived fully.
+              <p className="mx-auto mt-7 max-w-2xl text-[1.04rem] leading-[1.9] text-[rgba(255,248,236,0.84)] sm:text-[1.08rem]">
+                Unique Truth was established as a step forward in helping an
+                individual whether it be a man, woman, or child into finding
+                their unique self. Analysing brain mechanisms and utilising
+                research backed methods we work to bring out your true
+                potential. Our team provides you with a one-stop accurate
+                solution to assess your day-to-day problems.
               </p>
             </FadeUp>
           </div>
@@ -599,9 +602,9 @@ export default function Aboutus() {
           <div className="mb-20 sm:mb-28 grid gap-4 sm:gap-5 md:grid-cols-2">
             {[
               {
-                tag: "Our Vision",
-                heading: "Illuminate the Hidden Self",
-                body: "Helping everyone to realise their unique natures through Fingerprint Analysis to dispel all upsets, confusions, myths, doubts, stress, worries, fears and insecurities.",
+                tag: "UNIQUE TRUTH VISION",
+                heading: "Helping everyone to realise their unique natures",
+                body: "Helping everyone to realise their unique natures through Fingerprint Analysis to dispel all upsets, confusions, myths, doubts, stress, worries, fears and anxiety.",
                 accent: "#c9a86c",
                 icon: (
                   <svg
@@ -661,9 +664,10 @@ export default function Aboutus() {
                 ),
               },
               {
-                tag: "Our Mission",
-                heading: "Unlock Your Unique Brain Pattern",
-                body: "Analysing individual’s unique fingerprints to reveal their hidden inborn Personality, Skills, Intelligence, Core Qualities, Passions, and Strengths to live happily and confidently.",
+                tag: "UNIQUE TRUTH MISSION",
+                heading:
+                  "Revealing hidden inborn personality and strengths",
+                body: "Analysing individual's unique fingerprints to reveal their hidden inborn Personality, Skills, Intelligence, Core Qualities, Passions, and Strengths to live happily and confidently.",
                 accent: "#5eead4",
                 icon: (
                   <svg

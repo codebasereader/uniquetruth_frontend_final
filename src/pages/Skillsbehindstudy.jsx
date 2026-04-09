@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { QuestionaryService } from "../api/questionaries";
+import QuestionaryEnquiryFlow from "../components/QuestionaryEnquiryFlow";
 
 const useInView = (threshold = 0.1) => {
   const ref = useRef(null);
@@ -102,10 +104,19 @@ const Skillsbehindstudy = () => {
             </p>
           </FadeUp>
 
+          <FadeUp delay={130}>
+            <QuestionaryEnquiryFlow
+              service={QuestionaryService.SKILLS_BEHIND_STUDIES}
+              interstitialBeforeEnquiry={
+                "Are you curious to understand your child's Specific learning methods as per their Uniqueness and Are you expecting your child to study stress free and perform better in studies – Let's register and book an appointment connect Unique TRUTH experts."
+              }
+            />
+          </FadeUp>
+
           {/* Key Benefits */}
           <div className="mb-8">
             <FadeUp delay={150}>
-              <h2 className="font-display text-3xl sm:text-4xl font-light text-[#fff8ef] mb-2">
+              <h2 className="font-display text-3xl sm:text-4xl font-light text-[#fff8ef] mb-2 mt-10">
                 🔹 Key Benefits / Value Proposition
               </h2>
             </FadeUp>

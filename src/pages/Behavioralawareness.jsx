@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { QuestionaryService } from "../api/questionaries";
+import QuestionaryEnquiryFlow from "../components/QuestionaryEnquiryFlow";
 
 const useInView = (threshold = 0.1) => {
   const ref = useRef(null);
@@ -95,6 +97,15 @@ const Behavioralawareness = () => {
               Benefits of{" "}
               <span className="text-[#c9a86c]">Behavioral Awareness</span>
             </h1>
+          </FadeUp>
+
+          <FadeUp delay={120} className="mb-10">
+            <QuestionaryEnquiryFlow
+              service={QuestionaryService.BEHAVIORAL_AWARENESS}
+              interstitialBeforeEnquiry={
+                "Would you love to experience your child's best behaviour by providing right environment as per their inborn natures. You are aware that building confidence in every aspect leads to best behaviour. Let's book an appointment with our Unique TRUTH experts."
+              }
+            />
           </FadeUp>
 
           {/* Benefits grid */}
@@ -198,6 +209,7 @@ const Behavioralawareness = () => {
               ))}
             </div>
           </div>
+
         </section>
 
         {/* Developments section */}
