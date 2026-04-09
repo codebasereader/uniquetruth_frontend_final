@@ -198,7 +198,7 @@ const areas = [
 const AreaCard = ({ area, delay }) => (
   <FadeUp delay={delay} className="h-full">
     <div
-      className="ps-card group relative h-full overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 backdrop-blur-sm"
+      className="ps-card group relative h-full overflow-hidden rounded-2xl border border-white/8 bg-white/3 p-6 backdrop-blur-sm xl:p-7"
       style={{ "--accent": area.accent }}
     >
       {/* corner glow */}
@@ -217,13 +217,13 @@ const AreaCard = ({ area, delay }) => (
       />
 
       <div
-        className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-white/[0.08] p-2.5"
+        className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-white/8 p-2.5"
         style={{ background: `${area.accent}12` }}
       >
         {area.icon}
       </div>
 
-      <h3 className="font-display mb-2 text-[1.15rem] font-light leading-snug text-[#fff8ef]">
+      <h3 className="font-display mb-2 text-[1.15rem] font-light leading-snug text-[#fff8ef] xl:text-[1.35rem]">
         {area.label}
       </h3>
 
@@ -232,7 +232,7 @@ const AreaCard = ({ area, delay }) => (
         style={{ background: area.accent }}
       />
 
-      <p className="text-[0.82rem] leading-[1.85] text-[rgba(255,248,236,0.55)]">
+      <p className="text-[0.82rem] leading-[1.85] text-[rgba(255,248,236,0.55)] xl:text-[0.9rem]">
         {area.desc}
       </p>
     </div>
@@ -244,7 +244,7 @@ const Personalizedservices = () => {
   return (
     <section
       id="personalised-services"
-      className="font-body relative overflow-hidden bg-[#0F2E15] py-20 sm:py-24 lg:py-28"
+      className="font-body relative overflow-hidden bg-[#0F2E15] py-20 sm:py-24 lg:py-28 xl:py-36"
     >
       <style>{`
         .font-display { font-family: 'Cormorant Garamond', serif !important; }
@@ -265,26 +265,26 @@ const Personalizedservices = () => {
 
       {/* Ambient background */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute -left-40 top-20 h-[26rem] w-[26rem] rounded-full bg-teal-400/5 blur-[120px]" />
-        <div className="absolute -right-32 bottom-24 h-[30rem] w-[30rem] rounded-full bg-[#c9a86c]/5 blur-[130px]" />
+        <div className="absolute -left-40 top-20 h-104 w-104 rounded-full bg-teal-400/5 blur-[120px]" />
+        <div className="absolute -right-32 bottom-24 h-120 w-120 rounded-full bg-[#c9a86c]/5 blur-[130px]" />
         <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-500/4 blur-[100px]" />
         <div className="ps-noise absolute inset-0 opacity-[0.022]" />
-        <div className="absolute inset-y-0 left-[6%] hidden lg:block w-px bg-gradient-to-b from-transparent via-[#c9a86c]/10 to-transparent" />
-        <div className="absolute inset-y-0 right-[6%] hidden lg:block w-px bg-gradient-to-b from-transparent via-teal-400/7 to-transparent" />
+        <div className="absolute inset-y-0 left-[6%] hidden lg:block w-px bg-linear-to-b from-transparent via-[#c9a86c]/10 to-transparent" />
+        <div className="absolute inset-y-0 right-[6%] hidden lg:block w-px bg-linear-to-b from-transparent via-teal-400/7 to-transparent" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 lg:px-14">
+      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 lg:px-14 xl:max-w-440">
         {/* ── Header ── */}
         <FadeUp className="mb-14 text-center sm:mb-16 lg:mb-20">
           <span className="inline-flex items-center rounded-full border border-[#c9a86c]/25 bg-[#14381f]/60 px-5 py-2 text-[0.6rem] font-semibold uppercase tracking-[0.32em] text-[#c9a86c] backdrop-blur-sm">
             Tailored For You
           </span>
-          <h2 className="font-display mt-6 text-[clamp(2.1rem,4.5vw,3.5rem)] font-light leading-[1.1] tracking-[-0.015em] text-[#fff8ef]">
+          <h2 className="font-display mt-6 text-[clamp(2.1rem,4.5vw,3.5rem)] font-light leading-[1.1] tracking-[-0.015em] text-[#fff8ef] 2xl:text-[clamp(2.5rem,3.9vw,4.2rem)]">
             Personalised &amp; Customized{" "}
             <em className="italic text-[#c9a86c]">Services</em>
           </h2>
-          <div className="mx-auto mt-6 h-px w-24 bg-gradient-to-r from-transparent via-[#c9a86c]/60 to-transparent" />
-          <p className="mx-auto mt-6 max-w-[560px] text-[0.9rem] leading-[1.88] text-[rgba(255,248,236,0.55)]">
+          <div className="mx-auto mt-6 h-px w-24 bg-linear-to-r from-transparent via-[#c9a86c]/60 to-transparent" />
+          <p className="mx-auto mt-6 max-w-[560px] text-[0.9rem] leading-[1.88] text-[rgba(255,248,236,0.55)] xl:max-w-3xl xl:text-[1rem]">
             Every dimension of your life holds a unique blueprint. We map each
             one with precision — so you can live with greater purpose, clarity,
             and fulfilment.

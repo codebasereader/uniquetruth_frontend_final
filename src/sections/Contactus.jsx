@@ -98,7 +98,7 @@ const Contactus = () => {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-[#0F2E15] py-16 sm:py-20 lg:py-24"
+      className="relative overflow-hidden bg-[#0F2E15] py-16 sm:py-20 lg:py-24 xl:py-32"
     >
       {/* Subtle noise (premium texture, no “grid pattern”) */}
       <div
@@ -111,33 +111,33 @@ const Contactus = () => {
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:max-w-[110rem]">
         {/* Heading */}
         <div className="text-center">
           <p className="text-[0.65rem] font-semibold uppercase tracking-[0.55em] text-teal-400/72 mb-4">
             GET IN TOUCH
           </p>
           <h2
-            className="text-[clamp(2.35rem,5.4vw,3.2rem)] font-light leading-[1.18] text-[#fff8ef]"
+            className="text-[clamp(2.35rem,5.4vw,3.2rem)] font-light leading-[1.18] text-[#fff8ef] 2xl:text-[clamp(2.8rem,4.4vw,4rem)]"
             style={{ fontFamily: "var(--font-cormorant-garamond), serif" }}
           >
             Contact <span className="italic text-[#c9a86c]">Us</span>
           </h2>
-          <p className="mx-auto mt-3 max-w-[680px] text-[0.9rem] leading-[1.92] text-[rgba(255,248,236,0.56)]">
+          <p className="mx-auto mt-3 max-w-[680px] text-[0.9rem] leading-[1.92] text-[rgba(255,248,236,0.56)] xl:max-w-[860px] xl:text-[1rem]">
             Have questions? We'd love to help you discover your unique truth. Reach out and our team will get back to you shortly.
           </p>
           <div className="mx-auto mt-6 h-px w-28 bg-linear-to-r from-transparent via-[#c9a86c]/65 to-transparent" />
         </div>
 
         {/* Info cards */}
-        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
-          <div className="rounded-2xl border border-white/8 bg-white/4 p-6 text-center backdrop-blur-sm transition-all duration-300 hover:border-[#c9a86c]/30">
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3 xl:gap-5">
+          <div className="rounded-2xl border border-white/8 bg-white/4 p-6 text-center backdrop-blur-sm transition-all duration-300 hover:border-[#c9a86c]/30 xl:p-7">
             <div className="flex items-center justify-center">
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/8 bg-[#0F2E15]/60 text-teal-400/75">
                 <PhoneIcon />
               </div>
             </div>
-            <h3 className="mt-3 text-[0.98rem] font-medium text-[#fff8ef]">
+            <h3 className="mt-3 text-[0.98rem] font-medium text-[#fff8ef] xl:text-[1.08rem]">
               Give Us a Call
             </h3>
             <p className="mt-1 text-[0.72rem] leading-normal text-[rgba(255,248,236,0.56)]">
@@ -145,13 +145,13 @@ const Contactus = () => {
             </p>
           </div>
 
-          <div className="rounded-2xl border border-white/8 bg-white/4 p-6 text-center backdrop-blur-sm transition-all duration-300 hover:border-[#c9a86c]/30">
+          <div className="rounded-2xl border border-white/8 bg-white/4 p-6 text-center backdrop-blur-sm transition-all duration-300 hover:border-[#c9a86c]/30 xl:p-7">
             <div className="flex items-center justify-center">
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/8 bg-[#0F2E15]/60 text-teal-400/75">
                 <MailIcon />
               </div>
             </div>
-            <h3 className="mt-3 text-[0.98rem] font-medium text-[#fff8ef]">
+            <h3 className="mt-3 text-[0.98rem] font-medium text-[#fff8ef] xl:text-[1.08rem]">
               Drop Us a Line
             </h3>
             <p className="mt-1 text-[0.72rem] leading-normal text-[rgba(255,248,236,0.56)]">
@@ -159,13 +159,13 @@ const Contactus = () => {
             </p>
           </div>
 
-          <div className="rounded-2xl border border-white/8 bg-white/4 p-6 text-center backdrop-blur-sm transition-all duration-300 hover:border-[#c9a86c]/30">
+          <div className="rounded-2xl border border-white/8 bg-white/4 p-6 text-center backdrop-blur-sm transition-all duration-300 hover:border-[#c9a86c]/30 xl:p-7">
             <div className="flex items-center justify-center">
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/8 bg-[#0F2E15]/60 text-[#c9a86c]">
                 <PinIcon />
               </div>
             </div>
-            <h3 className="mt-3 text-[0.98rem] font-medium text-[#fff8ef]">
+            <h3 className="mt-3 text-[0.98rem] font-medium text-[#fff8ef] xl:text-[1.08rem]">
               Visit Our Office
             </h3>
             <p className="mt-1 text-[0.68rem] leading-normal text-[rgba(255,248,236,0.56)]">
@@ -179,7 +179,7 @@ const Contactus = () => {
         </div>
 
         {/* Map + form */}
-        <div className="mt-10 grid gap-6 lg:grid-cols-2 lg:gap-8 lg:items-start">
+        <div className="mt-10 grid gap-6 lg:grid-cols-2 lg:gap-8 lg:items-start xl:gap-10">
           {/* Map */}
           <div className="relative overflow-hidden rounded-2xl border border-white/8 bg-white/4 shadow-[0_22px_80px_rgba(0,0,0,0.22)]">
             <div className="absolute left-4 right-4 top-4 z-10 rounded-xl bg-[#0F2E15]/90 px-4 py-2 text-white/85 shadow-[0_18px_45px_rgba(0,0,0,0.22)]">

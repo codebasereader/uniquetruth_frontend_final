@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import BrandText from "../components/BrandText";
 
 // ── Brand tokens – matched to website theme ──────────────────
 const C = {
@@ -196,14 +197,14 @@ export default function PageLoader({ onComplete }) {
               >
                 <span
                   style={{
-                    fontFamily: "var(--font-cormorant-garamond), serif",
+                    fontFamily: "var(--font-dm-sans), sans-serif",
                     fontWeight: 600,
                     fontSize: "clamp(24px, 4vw, 34px)",
                     color: C.lightText,
                     letterSpacing: "0.06em",
                   }}
                 >
-                  Unique
+                  <BrandText text="Unique" />
                 </span>
                 <span
                   style={{
@@ -215,7 +216,7 @@ export default function PageLoader({ onComplete }) {
                     textTransform: "uppercase",
                   }}
                 >
-                  TRUTH
+                  <BrandText text="TRUTH" />
                 </span>
               </div>
 
@@ -250,7 +251,7 @@ export default function PageLoader({ onComplete }) {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.4, delay: 0.7 }}
               >
-                Reveals Your Unique Natures
+                Reveals Your <BrandText text="Unique" /> Natures
               </motion.p>
             </motion.div>
 

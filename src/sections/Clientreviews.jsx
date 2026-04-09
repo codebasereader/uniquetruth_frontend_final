@@ -115,7 +115,7 @@ export default function Clientreviews() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#0F2E15] py-20 sm:py-28">
+    <section className="relative overflow-hidden bg-[#0F2E15] py-20 sm:py-28 xl:py-36">
       {/* Ambient glows */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         <div className="absolute -left-44 top-0 h-[500px] w-[500px] rounded-full bg-emerald-500/8 blur-[120px]" />
@@ -125,7 +125,7 @@ export default function Clientreviews() {
         <div className="absolute inset-y-0 right-[6%] hidden w-px bg-linear-to-b from-transparent via-teal-400/6 to-transparent lg:block" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 xl:max-w-6xl">
         {/* Section heading */}
         <motion.div
           className="mb-14 text-center"
@@ -138,12 +138,12 @@ export default function Clientreviews() {
             Client Testimonials
           </p>
           <h2
-            className="text-[clamp(2.1rem,4.8vw,3.45rem)] font-light leading-[1.1] text-[#fff8ef]"
+            className="text-[clamp(2.1rem,4.8vw,3.45rem)] font-light leading-[1.1] text-[#fff8ef] 2xl:text-[clamp(2.6rem,4.2vw,4rem)]"
             style={{ fontFamily: "var(--font-cormorant-garamond), serif" }}
           >
             What Our <em className="italic text-[#c9a86c]">Clients</em> Say
           </h2>
-          <p className="mt-3 text-[0.84rem] tracking-wide text-[#fff2df]/55">
+          <p className="mt-3 text-[0.84rem] tracking-wide text-[#fff2df]/55 xl:text-[0.95rem]">
             Testimonial is our testimonials
           </p>
           <div className="mx-auto mt-5 h-px w-20 bg-linear-to-r from-transparent via-[#c9a86c]/45 to-transparent" />
@@ -224,7 +224,7 @@ export default function Clientreviews() {
                 </svg>
 
                 {/* Inner content */}
-                <div className="relative z-10 flex flex-col items-center gap-6 px-7 py-9 sm:flex-row sm:items-center sm:gap-9 sm:px-11 sm:py-11">
+                <div className="relative z-10 flex flex-col items-center gap-6 px-7 py-9 sm:flex-row sm:items-center sm:gap-9 sm:px-11 sm:py-11 xl:px-12 xl:py-12">
                   {/* Ornate avatar medallion */}
                   <div className="relative shrink-0" style={{ width: 114, height: 114 }}>
                     <OrnateRing />
@@ -270,7 +270,7 @@ export default function Clientreviews() {
                         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                       >
                         <p
-                          className="text-[0.9rem] font-light leading-[1.92] text-[#4a3425] sm:text-[0.95rem]"
+                          className="text-[0.9rem] font-light leading-[1.92] text-[#4a3425] sm:text-[0.95rem] xl:text-[1.02rem]"
                         >
                           &ldquo;{r.text}&rdquo;
                         </p>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
+import BrandText from "../components/BrandText";
 
 const HeroStyles = () => (
   <style>{`
@@ -39,7 +40,7 @@ const HeroStyles = () => (
   `}</style>
 );
 
-const Hero = () => {
+const Hero = ({ onEnquireClick }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const stats = [
     { value: "98%", label: "Accuracy" },
@@ -134,7 +135,7 @@ const Hero = () => {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         />
 
-        <div className="relative z-20 mx-auto flex w-full max-w-7xl flex-col px-4 sm:px-6 lg:px-8">
+        <div className="relative z-20 mx-auto flex w-full max-w-7xl flex-col px-4 sm:px-6 lg:px-8 xl:max-w-[110rem]">
           <motion.div
             className="flex h-[70px] items-center justify-between md:h-[78px]"
             initial={{ opacity: 0, y: -10 }}
@@ -149,7 +150,7 @@ const Hero = () => {
               <img
                 src="/assets/utlogo.png"
                 alt="Unique Truth"
-                className="h-[42px] w-auto object-contain drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)] sm:h-[46px] lg:h-[54px]"
+                className="h-[50px] mt-2 w-auto object-contain drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)] sm:h-[58px] lg:h-[68px] xl:h-[78px] 2xl:h-[88px]"
               />
             </a>
 
@@ -246,45 +247,49 @@ const Hero = () => {
                 className="font-display pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[42%] select-none whitespace-nowrap text-[clamp(2.5rem,10vw,7.5rem)] font-light leading-none text-white/[0.03]"
                 aria-hidden="true"
               >
-                UNIQUE TRUTH
+                <BrandText text="Unique TRUTH" />
               </div>
 
               <span className="relative inline-flex items-center rounded-full border border-[#c9a86c]/25 bg-[#14381f]/60 px-5 py-2 text-[0.62rem] font-semibold uppercase tracking-[0.32em] text-[#c9a86c] shadow-[0_0_0_1px_rgba(255,255,255,0.04)_inset] backdrop-blur-sm">
                 Fingerprint Intelligence
               </span>
 
-              <h1 className="font-display relative mt-6 text-[clamp(2.75rem,6.2vw,5rem)] font-light leading-[1.05] tracking-[-0.02em] text-[#fff8ef]">
+              <h1 className="font-display relative mt-6 text-[clamp(2.75rem,6.2vw,5rem)] font-light leading-[1.05] tracking-[-0.02em] text-[#fff8ef] 2xl:text-[clamp(3.25rem,5.4vw,6rem)]">
                 <span className="block sm:inline">Reveals Your</span>
                 <span className="block sm:ml-2">
-                  <em className="italic text-[#c9a86c]">Unique</em> Nature
+                  <em className="italic text-[#c9a86c]">
+                    <BrandText text="Unique" />
+                  </em>{" "}
+                  Nature
                 </span>
               </h1>
 
               <div className="relative mx-auto mt-6 h-px w-24 bg-gradient-to-r from-transparent via-[#c9a86c]/60 to-transparent" />
 
-              <p className="relative mx-auto mt-6 max-w-[620px] text-[0.92rem] leading-[1.85] text-[rgba(255,248,236,0.55)]">
+              <p className="relative mx-auto mt-6 max-w-[620px] text-[0.92rem] leading-[1.85] text-[rgba(255,248,236,0.55)] xl:max-w-[760px] xl:text-[1.02rem]">
                 Discover the hidden blueprint encoded in your fingerprints, a
                 precision personal discovery report built for you alone. No
                 guesswork, just truth.
               </p>
 
-              <div className="relative mt-8 flex flex-wrap items-center justify-center gap-3">
-                <a
-                  href="#start"
-                  className="hero-cta-primary inline-flex items-center gap-2 rounded-full border border-[#c9a86c]/60 bg-[#c9a86c] px-7 py-3 text-[0.78rem] font-semibold tracking-[0.14em] text-[#1a120c] no-underline shadow-[0_10px_32px_rgba(201,168,108,0.25)]"
+              <div className="relative mt-8 flex flex-wrap items-center justify-center gap-3 xl:gap-4">
+                <button
+                  type="button"
+                  onClick={onEnquireClick}
+                  className="hero-cta-primary inline-flex items-center gap-2 rounded-full border border-[#c9a86c]/60 bg-[#c9a86c] px-7 py-3 text-[0.78rem] font-semibold tracking-[0.14em] text-[#1a120c] no-underline shadow-[0_10px_32px_rgba(201,168,108,0.25)] xl:px-8 xl:py-3.5 xl:text-[0.84rem]"
                 >
-                  Book Appointment
-                </a>
+                  Enquire Now
+                </button>
 
                 <a
-                  href="#learn"
-                  className="hero-cta-ghost inline-flex items-center gap-2 rounded-full border border-white/14 bg-white/[0.05] px-7 py-3 text-[0.78rem] font-medium tracking-[0.08em] text-[rgba(255,248,236,0.82)] no-underline backdrop-blur-sm"
+                  href="#contact"
+                  className="hero-cta-ghost inline-flex items-center gap-2 rounded-full border border-white/14 bg-white/[0.05] px-7 py-3 text-[0.78rem] font-medium tracking-[0.08em] text-[rgba(255,248,236,0.82)] no-underline backdrop-blur-sm xl:px-8 xl:py-3.5 xl:text-[0.84rem]"
                 >
-                  How It Works
+                  Contact Us
                 </a>
               </div>
 
-              <div className="relative mx-auto mt-12 grid max-w-xl grid-cols-3 gap-3 sm:gap-4">
+              <div className="relative mx-auto mt-12 grid max-w-xl grid-cols-3 gap-3 sm:gap-4 xl:max-w-2xl xl:gap-5">
                 {stats.map((s) => (
                   <div
                     key={s.value}

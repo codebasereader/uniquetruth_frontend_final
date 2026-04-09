@@ -3,6 +3,7 @@ import {
   createQuestionaryEnquiry,
   getQuestionariesByService,
 } from "../api/questionaries";
+import BrandText from "./BrandText";
 
 export default function QuestionaryEnquiryFlow({
   service,
@@ -241,7 +242,7 @@ export default function QuestionaryEnquiryFlow({
       {!loading && showInterstitial ? (
         <div className="mt-5 rounded-xl border border-[#0f2e1a]/10 bg-white/95 p-5 shadow-inner sm:p-7">
           <p className="text-base font-semibold leading-relaxed text-[#0a1a12] sm:text-lg">
-            {interstitialBeforeEnquiry}
+            <BrandText text={interstitialBeforeEnquiry} />
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-3">
             <button

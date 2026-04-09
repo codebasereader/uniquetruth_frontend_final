@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { QuestionaryService } from "../api/questionaries";
 import QuestionaryEnquiryFlow from "../components/QuestionaryEnquiryFlow";
+import BrandText from "../components/BrandText";
 
 const useInView = (threshold = 0.1) => {
   const ref = useRef(null);
@@ -210,7 +211,7 @@ const Skillsbehindstudy = () => {
               <p className="text-[1rem] leading-[1.95] text-[rgba(255,248,236,0.62)] max-w-4xl">
                 With the support of{" "}
                 <span className="text-[#c9a86c] font-medium">
-                  Unique TRUTH's Fingerprint Analysis,
+                  <BrandText text="Unique TRUTH's" /> Fingerprint Analysis,
                 </span>{" "}
                 customized specific learning methods help a child to perform
                 best in their academics.

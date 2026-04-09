@@ -43,7 +43,7 @@ const Talentawareness = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0a1f14] via-[#0f2e1a] to-[#0d2416]">
+    <div className="min-h-screen bg-linear-to-b from-[#0a1f14] via-[#0f2e1a] to-[#0d2416]">
       {/* Noise overlay */}
       <div
         className="pointer-events-none fixed inset-0 opacity-5"
@@ -62,7 +62,7 @@ const Talentawareness = () => {
       <div className="relative z-10">
         {/* Header with back button */}
         <header className="sticky top-0 z-40 backdrop-blur-lg bg-[#0f2e1a]/40 border-b border-white/5">
-          <div className="max-w-6xl mx-auto px-6 sm:px-8 py-4 flex items-center justify-between">
+          <div className="max-w-6xl mx-auto px-6 sm:px-8 py-4 flex items-center justify-between xl:max-w-440">
             <button
               onClick={() => navigate("/#services")}
               className="flex items-center gap-2 text-sm font-medium text-[#c9a86c] hover:text-[#e8d5b5] transition-colors duration-300 cursor-pointer"
@@ -89,9 +89,9 @@ const Talentawareness = () => {
         </header>
 
         {/* Hero section */}
-        <section className="max-w-6xl mx-auto px-6 sm:px-8 py-16 sm:py-24">
+        <section className="max-w-6xl mx-auto px-6 sm:px-8 py-16 sm:py-24 xl:max-w-440 xl:py-28">
           <FadeUp>
-            <h1 className="font-display text-5xl sm:text-6xl font-light text-[#fff8ef] mb-6 leading-tight">
+            <h1 className="font-display text-5xl sm:text-6xl font-light text-[#fff8ef] mb-6 leading-tight 2xl:text-7xl">
               Benefits of{" "}
               <span className="text-[#c9a86c]">Talent Awareness</span>
             </h1>
@@ -108,7 +108,7 @@ const Talentawareness = () => {
               <FadeUp key={idx} delay={idx * 100}>
                 <div className="group h-full p-6 rounded-2xl border border-white/10 bg-white/3 backdrop-blur-sm hover:bg-white/8 transition-all duration-500 hover:border-[#c9a86c]/30 hover:shadow-lg hover:shadow-amber-600/10">
                   <div className="flex items-start gap-4">
-                    <div className="w-6 h-6 mt-1 shrink-0 rounded-full bg-gradient-to-br from-[#5eead4] to-[#c9a86c] flex items-center justify-center">
+                    <div className="w-6 h-6 mt-1 shrink-0 rounded-full bg-linear-to-br from-[#5eead4] to-[#c9a86c] flex items-center justify-center">
                       <svg
                         className="w-3 h-3 text-[#0f2e1a]"
                         fill="currentColor"
@@ -132,10 +132,10 @@ const Talentawareness = () => {
         </section>
 
         {/* Hero Image Section */}
-        <section className="max-w-6xl mx-auto px-6 sm:px-8 py-12 sm:py-20">
+        <section className="max-w-6xl mx-auto px-6 sm:px-8 py-12 sm:py-20 xl:max-w-440 xl:py-24">
           <FadeUp>
             <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#5eead4]/20 to-[#c9a86c]/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute -inset-1 bg-linear-to-r from-[#5eead4]/20 to-[#c9a86c]/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <img
                 src="/assets/services/talent.png"
                 alt="Talent Awareness Journey Map"
@@ -146,7 +146,7 @@ const Talentawareness = () => {
         </section>
 
         {/* Latent Success Path */}
-        <section className="max-w-6xl mx-auto px-6 sm:px-8 py-16 sm:py-24">
+        <section className="max-w-6xl mx-auto px-6 sm:px-8 py-16 sm:py-24 xl:max-w-440 xl:py-28">
           <FadeUp>
             <h2 className="font-display text-4xl sm:text-5xl font-light text-[#fff8ef] mb-4">
               Latent Success Path
@@ -162,7 +162,7 @@ const Talentawareness = () => {
           <div className="space-y-8">
             {/* Main intro */}
             <FadeUp delay={100}>
-              <div className="p-8 rounded-3xl border border-[#5eead4]/20 bg-gradient-to-br from-[#5eead4]/5 via-transparent to-[#c9a86c]/5 backdrop-blur-sm">
+              <div className="p-8 rounded-3xl border border-[#5eead4]/20 bg-linear-to-br from-[#5eead4]/5 via-transparent to-[#c9a86c]/5 backdrop-blur-sm">
                 <p className="text-lg leading-relaxed text-[rgba(255,248,236,0.85)] max-w-3xl">
                   Top 3 skills out of 12 professional skills increase your
                   performance, productivity and satisfaction without struggling
@@ -205,7 +205,7 @@ const Talentawareness = () => {
               ].map((pillar, idx) => (
                 <FadeUp key={idx} delay={idx * 120}>
                   <div
-                    className={`group h-full p-8 rounded-2xl border border-white/10 bg-gradient-to-br ${pillar.accentColor}/5 to-transparent backdrop-blur-sm hover:bg-white/8 hover:border-white/20 transition-all duration-500 hover:shadow-xl cursor-pointer`}
+                    className={`group h-full p-8 rounded-2xl border border-white/10 bg-linear-to-br ${pillar.accentColor}/5 to-transparent backdrop-blur-sm hover:bg-white/8 hover:border-white/20 transition-all duration-500 hover:shadow-xl cursor-pointer`}
                   >
                     <div className="flex items-start gap-4 mb-4">
                       <span className="text-2xl">{pillar.icon}</span>
@@ -213,7 +213,7 @@ const Talentawareness = () => {
                         {pillar.title}
                       </h3>
                     </div>
-                    <p className="text-[0.95rem] leading-relaxed text-[rgba(255,248,236,0.7)]">
+                    <p className="text-[0.95rem] leading-relaxed text-[rgba(255,248,236,0.7)] xl:text-[1rem]">
                       {pillar.description}
                     </p>
                   </div>
@@ -224,7 +224,7 @@ const Talentawareness = () => {
         </section>
 
         {/* Why section */}
-        <section className="max-w-6xl mx-auto px-6 sm:px-8 py-16 sm:py-24">
+        <section className="max-w-6xl mx-auto px-6 sm:px-8 py-16 sm:py-24 xl:max-w-440 xl:py-28">
           <FadeUp>
             <h2 className="font-display text-4xl sm:text-5xl font-light text-[#fff8ef] mb-4 flex items-center gap-3">
               <span>❓ Why do you want to experience Talent Awareness?</span>
@@ -254,9 +254,9 @@ const Talentawareness = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="max-w-6xl mx-auto px-6 sm:px-8 py-16 sm:py-24">
+        <section className="max-w-6xl mx-auto px-6 sm:px-8 py-16 sm:py-24 xl:max-w-440 xl:py-28">
           <FadeUp>
-            <div className="relative overflow-hidden rounded-3xl p-12 sm:p-16 border border-[#c9a86c]/30 bg-gradient-to-r from-[#c9a86c]/10 via-[#5eead4]/5 to-[#c9a86c]/10 backdrop-blur-xl group cursor-pointer hover:border-[#c9a86c]/50 transition-all duration-500">
+            <div className="relative overflow-hidden rounded-3xl p-12 sm:p-16 border border-[#c9a86c]/30 bg-linear-to-r from-[#c9a86c]/10 via-[#5eead4]/5 to-[#c9a86c]/10 backdrop-blur-xl group cursor-pointer hover:border-[#c9a86c]/50 transition-all duration-500">
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#c9a86c]/10 rounded-full blur-3xl" />
               </div>
@@ -269,7 +269,7 @@ const Talentawareness = () => {
                   Begin your Talent Awareness journey today and unlock the
                   natural gifts that will guide your path to success.
                 </p>
-                <button className="inline-block px-8 py-4 rounded-full bg-gradient-to-r from-[#c9a86c] to-[#5eead4] text-[#0f2e1a] font-semibold text-sm uppercase tracking-[0.15em] hover:shadow-xl hover:shadow-amber-600/40 transition-all duration-300 hover:scale-105 cursor-pointer">
+                <button className="inline-block px-8 py-4 rounded-full bg-linear-to-r from-[#c9a86c] to-[#5eead4] text-[#0f2e1a] font-semibold text-sm uppercase tracking-[0.15em] hover:shadow-xl hover:shadow-amber-600/40 transition-all duration-300 hover:scale-105 cursor-pointer">
                   Start Your Journey
                 </button>
               </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import BrandText from "./BrandText";
 
 const NOISE_BG =
   "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")";
@@ -239,7 +240,7 @@ const Footer = () => {
 
         <div className="flex flex-col gap-4 border-t border-white/[0.06] py-7 sm:flex-row sm:items-center sm:justify-between sm:py-8">
           <p className="text-center text-[0.72rem] text-[rgba(255,248,236,0.38)] sm:text-left">
-            © {year} Unique Truth. All rights reserved.
+            © {year} <BrandText text="Unique Truth" />. All rights reserved.
           </p>
           <button
             type="button"

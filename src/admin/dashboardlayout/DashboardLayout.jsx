@@ -274,10 +274,10 @@ export default function DashboardLayout() {
       {/* ══ MAIN CONTENT ══ */}
       <div className="relative z-10 flex min-w-0 flex-1 flex-col overflow-hidden">
         {/* Top bar */}
-        <header className="flex h-[60px] shrink-0 items-center justify-between border-b border-white/15 bg-white/10 px-6 backdrop-blur-xl">
+        <header className="flex h-[60px] shrink-0 items-center justify-between border-b border-white/15 bg-white/10 px-6 backdrop-blur-xl xl:h-[68px] xl:px-8">
           {isMobile ? (
             <div className="flex items-center gap-2">
-              <span className="text-[15px] font-bold text-white font-serif tracking-[-0.01em]">
+              <span className="text-[15px] font-bold text-white font-serif tracking-[-0.01em] xl:text-[17px]">
                 Admin Dashboard
               </span>
             </div>
@@ -286,22 +286,20 @@ export default function DashboardLayout() {
           )}
           <div className="flex items-center gap-3">
             <Avatar name={name} />
-            {isMobile && (
-              <button
-                type="button"
-                onClick={handleLogout}
-                className="flex cursor-pointer items-center gap-1.5 rounded-[10px] border-none bg-red-500/20 px-3 py-1.5 text-[12px] font-semibold text-red-200 transition-colors duration-150 hover:bg-red-500/30"
-              >
-                <LogoutIcon size={14} />
-                <span className="hidden xs:inline">Logout</span>
-              </button>
-            )}
+            <button
+              type="button"
+              onClick={handleLogout}
+              className="flex cursor-pointer items-center gap-1.5 rounded-[10px] border-none bg-red-500/20 px-3 py-1.5 text-[12px] font-semibold text-red-200 transition-colors duration-150 hover:bg-red-500/30"
+            >
+              <LogoutIcon size={14} />
+              <span>Logout</span>
+            </button>
           </div>
         </header>
 
         {/* Scrollable page content */}
         <main
-          className="flex-1 overflow-y-auto p-7 [scrollbar-width:thin] [scrollbar-color:#5eead4_transparent] [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:rounded [&::-webkit-scrollbar-thumb]:bg-[#5eead4]"
+          className="flex-1 overflow-y-auto p-7 [scrollbar-width:thin] [scrollbar-color:#5eead4_transparent] [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:rounded [&::-webkit-scrollbar-thumb]:bg-[#5eead4] xl:p-9"
           style={{ paddingBottom: isMobile ? "90px" : "28px" }}
         >
           <Outlet />

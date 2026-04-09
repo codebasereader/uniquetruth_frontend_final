@@ -95,12 +95,21 @@ const LoginPage = () => {
       <ButterflyBackground />
       <div className="absolute inset-0 bg-linear-to-b from-white/5 via-transparent to-transparent" />
 
-      <div className="relative z-10 flex min-h-screen items-center justify-center px-4 py-8">
-        <div className="w-full max-w-md rounded-3xl border border-white/15 bg-white/8 p-8 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl">
-          <h1 className="mb-2 text-center text-3xl font-semibold tracking-tight">
+      <div className="relative z-10 flex min-h-screen items-center justify-center px-4 py-8 xl:px-8">
+        <button
+          type="button"
+          onClick={() => navigate("/")}
+          className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm transition hover:bg-white/15 sm:left-6 sm:top-6"
+        >
+          <span aria-hidden="true">←</span>
+          Back to Home
+        </button>
+
+        <div className="w-full max-w-md rounded-3xl border border-white/15 bg-white/8 p-8 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl xl:max-w-xl xl:p-10">
+          <h1 className="mb-2 text-center text-3xl font-semibold tracking-tight xl:text-4xl">
             Welcome Back
           </h1>
-          <p className="mb-8 text-center text-sm text-white/80">
+          <p className="mb-8 text-center text-sm text-white/80 xl:text-base">
             Sign in to continue to your dashboard.
           </p>
 
@@ -115,7 +124,7 @@ const LoginPage = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 autoComplete="email"
                 placeholder="user@example.com"
-                className="w-full rounded-xl border border-white/25 bg-white/10 px-4 py-3 text-white outline-none transition focus:border-[#5eead4]/60 focus:ring-2 focus:ring-[#5eead4]/40"
+                className="w-full rounded-xl border border-white/25 bg-white/10 px-4 py-3 text-white outline-none transition focus:border-[#5eead4]/60 focus:ring-2 focus:ring-[#5eead4]/40 xl:text-base"
               />
             </div>
 
@@ -129,7 +138,7 @@ const LoginPage = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 autoComplete="current-password"
                 placeholder="Enter your password"
-                className="w-full rounded-xl border border-white/25 bg-white/10 px-4 py-3 text-white outline-none transition focus:border-[#5eead4]/60 focus:ring-2 focus:ring-[#5eead4]/40"
+                className="w-full rounded-xl border border-white/25 bg-white/10 px-4 py-3 text-white outline-none transition focus:border-[#5eead4]/60 focus:ring-2 focus:ring-[#5eead4]/40 xl:text-base"
               />
             </div>
 
@@ -142,7 +151,7 @@ const LoginPage = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full rounded-xl bg-linear-to-r from-[#c9a86c] to-[#5eead4] px-4 py-3 text-sm font-semibold text-[#0f2e1a] transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-70"
+              className="w-full rounded-xl bg-linear-to-r from-[#c9a86c] to-[#5eead4] px-4 py-3 text-sm font-semibold text-[#0f2e1a] transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-70 xl:text-base"
             >
               {isSubmitting ? "Signing in..." : "Sign In"}
             </button>

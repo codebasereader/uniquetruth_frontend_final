@@ -6,11 +6,11 @@ const formatNumber = (value) => {
 
 const StatCard = ({ label, value, accentClassName }) => {
   return (
-    <div className="rounded-2xl border border-white/15 bg-white/10 p-4 shadow-sm backdrop-blur-xl md:p-5">
-      <p className="text-xs font-semibold uppercase tracking-wide text-white/80">
+    <div className="rounded-2xl border border-white/15 bg-white/10 p-4 shadow-sm backdrop-blur-xl md:p-5 xl:p-6">
+      <p className="text-xs font-semibold uppercase tracking-wide text-white/80 xl:text-sm">
         {label}
       </p>
-      <p className={`mt-2 text-2xl font-bold text-white ${accentClassName || ""}`}>
+      <p className={`mt-2 text-2xl font-bold text-white xl:text-[2rem] ${accentClassName || ""}`}>
         {formatNumber(value)}
       </p>
     </div>

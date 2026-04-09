@@ -89,17 +89,17 @@ const Enquiries = () => {
 
   return (
     <>
-      <section className="mx-auto w-full max-w-[min(100%,96rem)] rounded-2xl border border-white/20 bg-white/10 p-6 shadow-xl backdrop-blur-xl md:p-8">
+      <section className="mx-auto w-full max-w-[min(100%,110rem)] rounded-2xl border border-white/20 bg-white/10 p-6 shadow-xl backdrop-blur-xl md:p-8 xl:p-10">
       <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
         <div>
-          <h1 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
+          <h1 className="text-2xl font-semibold tracking-tight text-white md:text-3xl xl:text-4xl">
             Enquiries
           </h1>
-          <p className="mt-1 text-sm text-white/90 md:text-base">
+          <p className="mt-1 text-sm text-white/90 md:text-base xl:text-lg">
             View enquiries by service and review submitted answers.
           </p>
         </div>
-        <div className="text-sm font-semibold text-white/90">{title}</div>
+        <div className="text-sm font-semibold text-white/90 xl:text-base">{title}</div>
       </div>
 
       <div className="mt-6">

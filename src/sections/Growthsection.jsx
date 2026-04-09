@@ -5,7 +5,7 @@ const Growthsection = () => {
   return (
     <section
       id="growth"
-      className="relative overflow-hidden bg-[#0F2E15] py-20 sm:py-24 lg:py-28"
+      className="relative overflow-hidden bg-[#0F2E15] py-20 sm:py-24 lg:py-28 xl:py-36"
     >
       <style>{`
         .growth-noise {
@@ -32,7 +32,7 @@ const Growthsection = () => {
         <div className="absolute inset-y-0 right-[6%] hidden lg:block w-px bg-linear-to-b from-transparent via-teal-400/8 to-transparent" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 lg:px-14">
+      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 lg:px-14 xl:max-w-440">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16 xl:gap-20">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -45,7 +45,7 @@ const Growthsection = () => {
             </p>
 
             <h2
-              className="text-[clamp(2.05rem,4.2vw,3.35rem)] font-light leading-[1.14] tracking-[-0.012em] text-[#fff8ef]"
+              className="text-[clamp(2.05rem,4.2vw,3.35rem)] font-light leading-[1.14] tracking-[-0.012em] text-[#fff8ef] 2xl:text-[clamp(2.5rem,3.9vw,4.1rem)]"
               style={{ fontFamily: "var(--font-cormorant-garamond), serif" }}
             >
               Let's Reveal Individualistic Psycology{" "}
@@ -54,13 +54,13 @@ const Growthsection = () => {
 
             <div className="mt-7 h-px w-24 bg-linear-to-r from-[#c9a86c]/60 to-transparent" />
 
-            <p className="mt-7 max-w-xl text-[0.93rem] leading-[1.88] text-[rgba(255,248,236,0.76)]">
+            <p className="mt-7 max-w-xl text-[0.93rem] leading-[1.88] text-[rgba(255,248,236,0.76)] xl:max-w-2xl xl:text-[1.02rem]">
               Your mind holds patterns only you can fully explore. We help you
               recognize those patterns and turn them into confident choices,
               clearer direction, and a deeper sense of who you are.
             </p>
 
-            <p className="mt-4 max-w-xl text-[0.93rem] leading-[1.9] text-[rgba(255,248,236,0.64)]">
+            <p className="mt-4 max-w-xl text-[0.93rem] leading-[1.9] text-[rgba(255,248,236,0.64)] xl:max-w-2xl xl:text-[1.02rem]">
               Through fingerprint intelligence and a precision personal
               discovery report, you get more than insight - you get a grounded
               blueprint built for you alone. No guesswork, just truth you can

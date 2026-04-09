@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import FirefliesBackground from "../components/threejsanimations/Firefliesbackground";
+import BrandText from "../components/BrandText";
 
 /* ─── Google Fonts ───────────────────────────────────────────────────── */
 const GlobalStyles = () => (
@@ -535,7 +536,7 @@ export default function Aboutus() {
           ))}
         </div>
 
-        <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 lg:px-14 py-20 sm:py-28 lg:py-36">
+        <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 lg:px-14 py-20 sm:py-28 lg:py-36 xl:max-w-[110rem] xl:py-40">
           {/* ══════════════════════════════
               HERO HEADER
           ══════════════════════════════ */}
@@ -545,17 +546,17 @@ export default function Aboutus() {
               className="font-display pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none whitespace-nowrap text-[clamp(3rem,11vw,9rem)] font-light leading-none text-white/[0.024]"
               aria-hidden="true"
             >
-              UNIQUE TRUTH
+              <BrandText text="Unique TRUTH" />
             </div>
 
             <FadeUp>
               <p className="text-[0.65rem] font-semibold uppercase tracking-[0.55em] text-[#c9a86c] mb-5">
-                STORY OF UNIQUE TRUTH
+                STORY OF <BrandText text="Unique TRUTH" />
               </p>
             </FadeUp>
 
             <FadeUp delay={80}>
-              <h2 className="font-display text-[clamp(2.1rem,5.5vw,3.8rem)] font-light leading-[1.18] text-[#fff8ef]">
+              <h2 className="font-display text-[clamp(2.1rem,5.5vw,3.8rem)] font-light leading-[1.18] text-[#fff8ef] 2xl:text-[clamp(2.6rem,4.6vw,4.4rem)]">
                 Unleashing your true potential and uncovering your{" "}
                 <em className="italic text-[#c9a86c]">Uniqueness.</em>
               </h2>
@@ -566,8 +567,9 @@ export default function Aboutus() {
             </FadeUp>
 
             <FadeUp delay={210}>
-              <p className="mx-auto mt-7 max-w-2xl text-[1.04rem] leading-[1.9] text-[rgba(255,248,236,0.84)] sm:text-[1.08rem]">
-                Unique Truth was established as a step forward in helping an
+              <p className="mx-auto mt-7 max-w-2xl text-[1.04rem] leading-[1.9] text-[rgba(255,248,236,0.84)] sm:text-[1.08rem] xl:max-w-4xl xl:text-[1.14rem]">
+                <BrandText text="Unique Truth" /> was established as a step
+                forward in helping an
                 individual whether it be a man, woman, or child into finding
                 their unique self. Analysing brain mechanisms and utilising
                 research backed methods we work to bring out your true
@@ -580,10 +582,10 @@ export default function Aboutus() {
           {/* ══════════════════════════════
               STATS
           ══════════════════════════════ */}
-          <div className="mb-20 sm:mb-28 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+          <div className="mb-20 sm:mb-28 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4 xl:gap-5">
             {stats.map((s, i) => (
               <FadeUp key={i} delay={i * 65}>
-                <div className="stat-card relative overflow-hidden rounded-2xl border border-white/8 bg-white/[0.04] px-5 py-7 sm:px-6 sm:py-8 text-center backdrop-blur-sm cursor-default">
+                <div className="stat-card relative overflow-hidden rounded-2xl border border-white/8 bg-white/[0.04] px-5 py-7 sm:px-6 sm:py-8 text-center backdrop-blur-sm cursor-default xl:px-7 xl:py-9">
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#c9a86c]/5 to-transparent" />
                   <p className="font-display text-[clamp(1.9rem,5vw,2.8rem)] font-light leading-none text-[#c9a86c]">
                     <Counter to={s.value} suffix={s.suffix} />
@@ -599,7 +601,7 @@ export default function Aboutus() {
           {/* ══════════════════════════════
               VISION & MISSION
           ══════════════════════════════ */}
-          <div className="mb-20 sm:mb-28 grid gap-4 sm:gap-5 md:grid-cols-2">
+          <div className="mb-20 sm:mb-28 grid gap-4 sm:gap-5 md:grid-cols-2 xl:gap-6">
             {[
               {
                 tag: "UNIQUE TRUTH VISION",
@@ -709,7 +711,7 @@ export default function Aboutus() {
               },
             ].map((card, i) => (
               <FadeUp key={i} delay={i * 90}>
-                <div className="vm-card group relative h-full overflow-hidden rounded-2xl border border-white/8 bg-white/[0.04] p-7 sm:p-9 backdrop-blur-sm cursor-default">
+                <div className="vm-card group relative h-full overflow-hidden rounded-2xl border border-white/8 bg-white/[0.04] p-7 sm:p-9 backdrop-blur-sm cursor-default xl:p-10">
                   <div
                     className="absolute top-0 left-10 right-10 h-px"
                     style={{
@@ -731,10 +733,10 @@ export default function Aboutus() {
                       >
                         {card.tag}
                       </p>
-                      <h3 className="font-display text-[1.2rem] sm:text-[1.35rem] font-light leading-snug text-[#fff8ef] mb-3">
+                      <h3 className="font-display text-[1.2rem] sm:text-[1.35rem] font-light leading-snug text-[#fff8ef] mb-3 xl:text-[1.55rem]">
                         {card.heading}
                       </h3>
-                      <p className="text-[0.86rem] leading-[1.84] text-[rgba(255,248,236,0.67)]">
+                      <p className="text-[0.86rem] leading-[1.84] text-[rgba(255,248,236,0.67)] xl:text-[0.95rem]">
                         {card.body}
                       </p>
                     </div>
@@ -765,7 +767,7 @@ export default function Aboutus() {
                 Ready to meet your truest self?
               </h4>
               <button className="cta-btn inline-flex items-center gap-3 rounded-full border border-[#c9a86c]/36 px-7 py-3.5 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-[#c9a86c]">
-                Discover Your Unique Truth
+                Discover Your <BrandText text="Unique Truth" />
                 <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none">
                   <path
                     d="M3 8h10M9 4l4 4-4 4"

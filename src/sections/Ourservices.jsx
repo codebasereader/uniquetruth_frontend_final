@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ButterflyBackground from "../components/threejsanimations/Butterflybackground";
+import BrandText from "../components/BrandText";
 
 /* ─── Shared styles (include once globally if already loaded) ────────── */
 const GlobalStyles = () => (
@@ -613,7 +614,7 @@ export default function Ourservices() {
           </div>
         </div>
 
-        <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 lg:px-14 py-20 sm:py-28 lg:py-36">
+        <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 lg:px-14 py-20 sm:py-28 lg:py-36 xl:max-w-[110rem] xl:py-40">
           {/* ══════════════════════════════
               HEADER
           ══════════════════════════════ */}
@@ -633,9 +634,11 @@ export default function Ourservices() {
             </FadeUp>
 
             <FadeUp delay={80}>
-              <h2 className="font-display text-[clamp(2.1rem,5.5vw,3.8rem)] font-light leading-[1.18] text-[#fff8ef]">
+              <h2 className="font-display text-[clamp(2.1rem,5.5vw,3.8rem)] font-light leading-[1.18] text-[#fff8ef] 2xl:text-[clamp(2.6rem,4.6vw,4.4rem)]">
                 Services crafted for your{" "}
-                <em className="italic text-[#c9a86c]">unique truth.</em>
+                <em className="italic text-[#c9a86c]">
+                  <BrandText text="Unique Truth" />
+                </em>
               </h2>
             </FadeUp>
 
@@ -644,7 +647,7 @@ export default function Ourservices() {
             </FadeUp>
 
             <FadeUp delay={210}>
-              <p className="mx-auto mt-7 max-w-lg text-[0.9rem] leading-[1.92] text-[rgba(255,248,236,0.56)]">
+              <p className="mx-auto mt-7 max-w-lg text-[0.9rem] leading-[1.92] text-[rgba(255,248,236,0.56)] xl:max-w-2xl xl:text-[1rem]">
                 Each service is a doorway into a deeper understanding of
                 yourself — your mind, your relationships, and the gifts you were
                 born to share.
@@ -655,11 +658,11 @@ export default function Ourservices() {
           {/* ══════════════════════════════
               SERVICE CARDS — 2×2 GRID
           ══════════════════════════════ */}
-          <div className="grid gap-4 sm:gap-5 sm:grid-cols-2 mb-16 sm:mb-20">
+          <div className="grid gap-4 sm:gap-5 sm:grid-cols-2 mb-16 sm:mb-20 xl:gap-6">
             {services.map((svc, i) => (
               <FadeUp key={i} delay={i * 80}>
                 <div
-                  className="srv-card group relative flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl border border-white/7 bg-[#14381f]/70 backdrop-blur-sm p-7 sm:p-8 lg:p-9"
+                  className="srv-card group relative flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl border border-white/7 bg-[#14381f]/70 backdrop-blur-sm p-7 sm:p-8 lg:p-9 xl:p-10"
                   onClick={() => handleServiceActivate(svc)}
                   role="button"
                   tabIndex={0}
@@ -725,7 +728,7 @@ export default function Ourservices() {
                   </span>
 
                   {/* Title */}
-                  <h3 className="font-display text-[1.25rem] sm:text-[1.38rem] font-light leading-snug text-[#fff8ef] mb-3">
+                  <h3 className="font-display text-[1.25rem] sm:text-[1.38rem] font-light leading-snug text-[#fff8ef] mb-3 xl:text-[1.55rem]">
                     {svc.title}
                   </h3>
 
@@ -738,7 +741,7 @@ export default function Ourservices() {
                   />
 
                   {/* Short description */}
-                  <p className="flex-1 text-[0.86rem] leading-[1.85] text-[rgba(255,248,236,0.62)]">
+                  <p className="flex-1 text-[0.86rem] leading-[1.85] text-[rgba(255,248,236,0.62)] xl:text-[0.94rem]">
                     {svc.short}
                   </p>
 
