@@ -145,15 +145,8 @@ export default function QuestionaryEnquiryFlow({
     <div
       className={`rounded-2xl border p-6 shadow-lg backdrop-blur-sm sm:p-8 ${cardClassName}`}
     >
-      <h3 className="font-display text-2xl font-semibold text-[#0a1a12] sm:text-[1.65rem]">
-        We request you to answer the questions
-      </h3>
-      <p className="mt-2 text-base font-medium text-[#0f2e1a]/85">
-        Answer one by one, then submit your enquiry details.
-      </p>
-
       {loading ? (
-        <p className="mt-4 text-base font-medium text-[#0f2e1a]/75">Loading questions...</p>
+        <p className="text-base font-medium text-[#0f2e1a]/75">Loading questions...</p>
       ) : null}
       {error ? (
         <div className="mt-4 rounded-lg border border-red-400/50 bg-red-50 px-3 py-2 text-sm font-medium text-red-900">
@@ -166,25 +159,142 @@ export default function QuestionaryEnquiryFlow({
         </div>
       ) : null}
 
-      {!loading && !started && questions.length > 0 ? (
-        <button
-          type="button"
-          onClick={() => {
-            setStarted(true);
-            setCurrentIndex(0);
-            setAnswersMap({});
-            setEnquiryIntent(null);
-            setSuccess("");
-            setError("");
-          }}
-          className="mt-5 rounded-full bg-linear-to-r from-[#c9a86c] to-[#5eead4] px-7 py-3 text-base font-semibold text-[#0f2e1a] shadow-md transition hover:opacity-95"
-        >
-          Start
-        </button>
+      {!started ? (
+        <>
+          <h3 className="font-display text-2xl font-semibold text-[#0a1a12] sm:text-[1.65rem]">
+            We request you to answer the questions
+          </h3>
+
+          <div
+            className="qe-discount-note relative mt-4 overflow-hidden rounded-2xl border-2 border-[#c9a86c]/70 bg-linear-to-br from-[#fffbeb] via-white to-[#ecfdf5] p-4 shadow-[0_8px_30px_rgba(201,168,108,0.22)] sm:p-5"
+            role="note"
+          >
+            <div
+              className="pointer-events-none absolute -right-8 -top-10 h-32 w-32 rounded-full bg-[#c9a86c]/20 blur-2xl"
+              aria-hidden
+            />
+            <div
+              className="pointer-events-none absolute -bottom-10 -left-6 h-28 w-28 rounded-full bg-[#5eead4]/15 blur-2xl"
+              aria-hidden
+            />
+            <p className="relative text-[0.65rem] font-bold uppercase tracking-[0.28em] text-[#b45309]">
+              Important note
+            </p>
+            <p className="relative mt-2 text-[0.98rem] font-semibold leading-relaxed text-[#0a1a12] sm:text-[1.05rem]">
+              If all your Answers are matching with our Analysis, you get{" "}
+              <strong className="font-bold text-[#0a1a12]">5% Discount</strong> in the Service.
+            </p>
+          </div>
+
+          <p className="mt-3 text-base font-medium text-[#0f2e1a]/85">
+            Answer one by one, then submit your enquiry details.
+          </p>
+
+          {!loading && questions.length > 0 ? (
+            <button
+              type="button"
+              onClick={() => {
+                setStarted(true);
+                setCurrentIndex(0);
+                setAnswersMap({});
+                setEnquiryIntent(null);
+                setSuccess("");
+                setError("");
+              }}
+              className="mt-5 rounded-full bg-linear-to-r from-[#c9a86c] to-[#5eead4] px-7 py-3 text-base font-semibold text-[#0f2e1a] shadow-md transition hover:opacity-95"
+            >
+              Start
+            </button>
+          ) : null}
+        </>
       ) : null}
 
-      {!loading && started && currentQuestion ? (
-        <div className="mt-5 rounded-xl border border-[#0f2e1a]/10 bg-white/95 p-5 shadow-inner transition-all duration-300 sm:p-6">
+      {started && showForm ? (
+        <form onSubmit={handleSubmit} className="mt-1 grid gap-3 sm:grid-cols-2">
+          <input
+            value={form.name}
+            onChange={(event) => setForm((prev) => ({ ...prev, name: event.target.value }))}
+            placeholder="Name"
+            className="rounded-xl border border-[#0f2e1a]/20 bg-white px-4 py-3 text-base text-[#0f2e1a] outline-none placeholder:text-[#0f2e1a]/45 focus:border-[#0d9488]/70"
+          />
+          <input
+            value={form.phoneNumber}
+            onChange={(event) =>
+              setForm((prev) => ({ ...prev, phoneNumber: event.target.value }))
+            }
+            placeholder="Phone Number"
+            className="rounded-xl border border-[#0f2e1a]/20 bg-white px-4 py-3 text-base text-[#0f2e1a] outline-none placeholder:text-[#0f2e1a]/45 focus:border-[#0d9488]/70"
+          />
+          <input
+            type="email"
+            value={form.email}
+            onChange={(event) => setForm((prev) => ({ ...prev, email: event.target.value }))}
+            placeholder="Email"
+            className="rounded-xl border border-[#0f2e1a]/20 bg-white px-4 py-3 text-base text-[#0f2e1a] outline-none placeholder:text-[#0f2e1a]/45 focus:border-[#0d9488]/70"
+          />
+          <input
+            value={form.gender}
+            onChange={(event) => setForm((prev) => ({ ...prev, gender: event.target.value }))}
+            placeholder="Gender"
+            className="rounded-xl border border-[#0f2e1a]/20 bg-white px-4 py-3 text-base text-[#0f2e1a] outline-none placeholder:text-[#0f2e1a]/45 focus:border-[#0d9488]/70"
+          />
+          <input
+            type="number"
+            min="1"
+            value={form.age}
+            onChange={(event) => setForm((prev) => ({ ...prev, age: event.target.value }))}
+            placeholder="Age"
+            className="rounded-xl border border-[#0f2e1a]/20 bg-white px-4 py-3 text-base text-[#0f2e1a] outline-none placeholder:text-[#0f2e1a]/45 focus:border-[#0d9488]/70 sm:col-span-2"
+          />
+          <button
+            type="submit"
+            disabled={submitting}
+            className="rounded-full bg-linear-to-r from-[#c9a86c] to-[#5eead4] px-6 py-3 text-base font-semibold text-[#0f2e1a] sm:col-span-2 disabled:opacity-70"
+          >
+            {submitting ? "Submitting..." : "Submit Enquiry"}
+          </button>
+        </form>
+      ) : null}
+
+      {started && showDeclined ? (
+        <div className="mt-1 rounded-xl border border-[#0f2e1a]/10 bg-white/95 p-5 text-base font-medium text-[#0f2e1a]">
+          Thank you for your time. We are glad you explored the questions.
+        </div>
+      ) : null}
+
+      {started && showInterstitial ? (
+        <div className="mt-1 rounded-xl border border-[#0f2e1a]/10 bg-white/95 p-5 shadow-inner sm:p-7">
+          <p className="text-base font-semibold leading-relaxed text-[#0a1a12] sm:text-lg">
+            <BrandText text={interstitialBeforeEnquiry} />
+          </p>
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <button
+              type="button"
+              onClick={() => setEnquiryIntent("yes")}
+              className="rounded-full bg-linear-to-r from-[#c9a86c] to-[#5eead4] px-8 py-3 text-base font-semibold text-[#0f2e1a] shadow-md"
+            >
+              Yes
+            </button>
+            <button
+              type="button"
+              onClick={() => setEnquiryIntent("no")}
+              className="rounded-full border-2 border-[#0f2e1a]/25 bg-white px-8 py-3 text-base font-semibold text-[#0f2e1a] hover:bg-[#0f2e1a]/5"
+            >
+              No
+            </button>
+            <button
+              type="button"
+              onClick={() => setCurrentIndex(Math.max(0, questions.length - 1))}
+              className="ml-auto text-sm font-semibold text-[#0d9488] underline-offset-2 hover:underline"
+            >
+              Back to last question
+            </button>
+          </div>
+        </div>
+      ) : null}
+
+      {started && !pastQuestions && currentQuestion ? (
+        <div className="mt-1 rounded-xl border border-[#0f2e1a]/10 bg-white/95 p-5 shadow-inner transition-all duration-300 sm:p-6">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#0d9488]">
             Question {currentIndex + 1} / {questions.length}
           </p>
@@ -237,90 +347,6 @@ export default function QuestionaryEnquiryFlow({
             </button>
           </div>
         </div>
-      ) : null}
-
-      {!loading && showInterstitial ? (
-        <div className="mt-5 rounded-xl border border-[#0f2e1a]/10 bg-white/95 p-5 shadow-inner sm:p-7">
-          <p className="text-base font-semibold leading-relaxed text-[#0a1a12] sm:text-lg">
-            <BrandText text={interstitialBeforeEnquiry} />
-          </p>
-          <div className="mt-6 flex flex-wrap items-center gap-3">
-            <button
-              type="button"
-              onClick={() => setEnquiryIntent("yes")}
-              className="rounded-full bg-linear-to-r from-[#c9a86c] to-[#5eead4] px-8 py-3 text-base font-semibold text-[#0f2e1a] shadow-md"
-            >
-              Yes
-            </button>
-            <button
-              type="button"
-              onClick={() => setEnquiryIntent("no")}
-              className="rounded-full border-2 border-[#0f2e1a]/25 bg-white px-8 py-3 text-base font-semibold text-[#0f2e1a] hover:bg-[#0f2e1a]/5"
-            >
-              No
-            </button>
-            <button
-              type="button"
-              onClick={() => setCurrentIndex(Math.max(0, questions.length - 1))}
-              className="ml-auto text-sm font-semibold text-[#0d9488] underline-offset-2 hover:underline"
-            >
-              Back to last question
-            </button>
-          </div>
-        </div>
-      ) : null}
-
-      {!loading && showDeclined ? (
-        <div className="mt-5 rounded-xl border border-[#0f2e1a]/10 bg-white/95 p-5 text-base font-medium text-[#0f2e1a]">
-          Thank you for your time. We are glad you explored the questions.
-        </div>
-      ) : null}
-
-      {showForm ? (
-        <form onSubmit={handleSubmit} className="mt-5 grid gap-3 sm:grid-cols-2">
-          <input
-            value={form.name}
-            onChange={(event) => setForm((prev) => ({ ...prev, name: event.target.value }))}
-            placeholder="Name"
-            className="rounded-xl border border-[#0f2e1a]/20 bg-white px-4 py-3 text-base text-[#0f2e1a] outline-none placeholder:text-[#0f2e1a]/45 focus:border-[#0d9488]/70"
-          />
-          <input
-            value={form.phoneNumber}
-            onChange={(event) =>
-              setForm((prev) => ({ ...prev, phoneNumber: event.target.value }))
-            }
-            placeholder="Phone Number"
-            className="rounded-xl border border-[#0f2e1a]/20 bg-white px-4 py-3 text-base text-[#0f2e1a] outline-none placeholder:text-[#0f2e1a]/45 focus:border-[#0d9488]/70"
-          />
-          <input
-            type="email"
-            value={form.email}
-            onChange={(event) => setForm((prev) => ({ ...prev, email: event.target.value }))}
-            placeholder="Email"
-            className="rounded-xl border border-[#0f2e1a]/20 bg-white px-4 py-3 text-base text-[#0f2e1a] outline-none placeholder:text-[#0f2e1a]/45 focus:border-[#0d9488]/70"
-          />
-          <input
-            value={form.gender}
-            onChange={(event) => setForm((prev) => ({ ...prev, gender: event.target.value }))}
-            placeholder="Gender"
-            className="rounded-xl border border-[#0f2e1a]/20 bg-white px-4 py-3 text-base text-[#0f2e1a] outline-none placeholder:text-[#0f2e1a]/45 focus:border-[#0d9488]/70"
-          />
-          <input
-            type="number"
-            min="1"
-            value={form.age}
-            onChange={(event) => setForm((prev) => ({ ...prev, age: event.target.value }))}
-            placeholder="Age"
-            className="rounded-xl border border-[#0f2e1a]/20 bg-white px-4 py-3 text-base text-[#0f2e1a] outline-none placeholder:text-[#0f2e1a]/45 focus:border-[#0d9488]/70 sm:col-span-2"
-          />
-          <button
-            type="submit"
-            disabled={submitting}
-            className="rounded-full bg-linear-to-r from-[#c9a86c] to-[#5eead4] px-6 py-3 text-base font-semibold text-[#0f2e1a] sm:col-span-2 disabled:opacity-70"
-          >
-            {submitting ? "Submitting..." : "Submit Enquiry"}
-          </button>
-        </form>
       ) : null}
     </div>
   );

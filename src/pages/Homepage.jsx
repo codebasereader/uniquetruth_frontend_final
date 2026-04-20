@@ -25,14 +25,23 @@ const Homepage = () => {
   ];
 
   useEffect(() => {
-    const scrollTarget =
-      location.state?.scrollTo || window.location.hash.replace("#", "");
+    const fromHash = (location.hash || "").replace(/^#/, "").trim();
+    const fromState =
+      typeof location.state?.scrollTo === "string"
+        ? location.state.scrollTo.trim()
+        : "";
+    const scrollTarget = fromHash || fromState;
 
-    if (scrollTarget) {
-      const section = document.getElementById(scrollTarget);
-      section?.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [location]);
+    if (!scrollTarget) return undefined;
+
+    const timer = window.setTimeout(() => {
+      document
+        .getElementById(scrollTarget)
+        ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+
+    return () => window.clearTimeout(timer);
+  }, [location.pathname, location.hash, location.state]);
 
   useEffect(() => {
     document.body.style.overflow = enquiryModalOpen ? "hidden" : "";
