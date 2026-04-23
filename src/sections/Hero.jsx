@@ -278,9 +278,10 @@ const Hero = ({ onEnquireClick }) => {
               <div className="relative mx-auto mt-6 h-px w-24 bg-gradient-to-r from-transparent via-[#c9a86c]/60 to-transparent" />
 
               <p className="relative mx-auto mt-6 max-w-[620px] text-[0.92rem] leading-[1.85] text-[rgba(255,248,236,0.55)] xl:max-w-[760px] xl:text-[1.02rem]">
-                Discover the hidden blueprint encoded in your fingerprints, a
-                precision personal discovery report built for you alone. No
-                guesswork, just truth.
+                Discover your true self through the world’s first scientific
+                methodology that uses 18 concepts and 92 parameters to provide a
+                100% accurate assessment of innate nature, effectively resolving
+                personal and professional misconceptions.
               </p>
 
               <div className="relative mt-8 flex flex-wrap items-center justify-center gap-3 xl:gap-4">
