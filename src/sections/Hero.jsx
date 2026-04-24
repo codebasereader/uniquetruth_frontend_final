@@ -288,7 +288,7 @@ const Hero = ({ onEnquireClick }) => {
                 <button
                   type="button"
                   onClick={onEnquireClick}
-                  className="hero-cta-primary inline-flex items-center gap-2 rounded-full border border-[#c9a86c]/60 bg-[#c9a86c] px-7 py-3 text-[0.78rem] font-semibold tracking-[0.14em] text-[#1a120c] no-underline shadow-[0_10px_32px_rgba(201,168,108,0.25)] xl:px-8 xl:py-3.5 xl:text-[0.84rem]"
+                  className="cursor-pointer hero-cta-primary inline-flex items-center gap-2 rounded-full border border-[#c9a86c]/60 bg-[#c9a86c] px-7 py-3 text-[0.78rem] font-semibold tracking-[0.14em] text-[#1a120c] no-underline shadow-[0_10px_32px_rgba(201,168,108,0.25)] xl:px-8 xl:py-3.5 xl:text-[0.84rem]"
                 >
                   Enquire Now
                 </button>

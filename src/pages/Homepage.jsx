@@ -70,7 +70,7 @@ const Homepage = () => {
       <button
         type="button"
         onClick={() => setEnquiryModalOpen(true)}
-        className="fixed bottom-20 right-5 z-50 rounded-full border border-[#c9a86c]/70 bg-[#e8d5b5] px-5 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#1a120c] shadow-[0_10px_36px_rgba(0,0,0,0.35)] transition-all duration-300 hover:bg-[#c9a86c] hover:border-[#c9a86c]"
+        className="cursor-pointer fixed bottom-20 right-5 z-50 rounded-full border border-[#c9a86c]/70 bg-[#e8d5b5] px-5 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#1a120c] shadow-[0_10px_36px_rgba(0,0,0,0.35)] transition-all duration-300 hover:bg-[#c9a86c] hover:border-[#c9a86c]"
       >
         Enquire Now
       </button>

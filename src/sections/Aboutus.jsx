@@ -601,7 +601,7 @@ export default function Aboutus() {
           {/* ══════════════════════════════
               VISION & MISSION
           ══════════════════════════════ */}
-          <div className="mb-20 sm:mb-28 grid gap-4 sm:gap-5 md:grid-cols-2 xl:gap-6">
+          <div className="grid gap-4 sm:gap-5 md:grid-cols-2 xl:gap-6">
             {[
               {
                 tag: "UNIQUE TRUTH VISION",
@@ -749,7 +749,7 @@ export default function Aboutus() {
           {/* ══════════════════════════════
               CTA STRIP
           ══════════════════════════════ */}
-          <FadeUp>
+          {/* <FadeUp>
             <div className="relative overflow-hidden rounded-3xl border border-white/8 bg-gradient-to-br from-[#1a4528]/80 to-[#0a2410]/80 px-7 py-11 sm:px-14 sm:py-16 text-center backdrop-blur-sm">
               <div
                 className="pointer-events-none absolute inset-0"
@@ -779,7 +779,7 @@ export default function Aboutus() {
                 </svg>
               </button>
             </div>
-          </FadeUp>
+          </FadeUp> */}
         </div>
 
         {/* ── Back to top ── */}
