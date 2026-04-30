@@ -199,8 +199,7 @@ const Relationshipawareness = () => {
                   title: "5 ways to Enhance EQ",
                   description:
                     "The world's first scientific approach to understand the deeper feelings of acceptance and rejection of love by understanding 5 Love Languages, Lack of love as per a person's Love Language is the root cause for Mood swings, Possessiveness, Anxiety, Autism, and over thinking. Awareness of love languages builds Safe, secure and confidence in a person.",
-                  image:
-                    "/assets/services/relationshipawareness/5waysto.png",
+                  image: "/assets/services/relationshipawareness/5waysto.png",
                   accentColor: "from-[#c9a86c]",
                 },
                 {
@@ -238,7 +237,6 @@ const Relationshipawareness = () => {
                 </FadeUp>
               ))}
             </div>
-
           </div>
         </section>
 
